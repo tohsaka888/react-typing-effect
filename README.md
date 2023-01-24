@@ -1,34 +1,36 @@
-# react-swc-module-template
+# react-typing-effect
 
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/tohsaka888/create-react-swc-app/blob/master/LICENSE)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+## demo
 
-## introduction
 
-help you build a `react` module with `swc` and `webpack`.
+## props
 
-## Output
-
-build a `cjs` module:
-
-```bash
-pnpm build:commonjs
+```ts
+export type TypingProps = {
+  children: string;
+  interval: number;
+  existTime: number;
+  textStyle?: CSSProperties;
+  symbolStyle?: CSSProperties;
+  symbol?: React.ReactElement;
+};
 ```
 
-build a `esm` module:
+## usage
 
-```bash
-pnpm build:esmodule
-```
-
-build a `amd` module:
-
-```bash
-pnpm build:amd
-```
-
-build a `umd` module:
-
-```bash
-pnpm build:umd
+```tsx
+<Typing
+  interval={100}
+  existTime={2000}
+  textStyle={{
+    fontSize: "1.2rem",
+    fontWeight: "bold",
+    fontStyle: "italic",
+  }}
+  symbolStyle={{
+    borderColor: "red",
+  }}
+>
+  Technology geeks save the world!
+</Typing>
 ```
