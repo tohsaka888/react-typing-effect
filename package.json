@@ -31,7 +31,7 @@
     "react-dom": "18.2.0"
   },
   "peerDependencies": {
-    "framer-motion": ">=8.0.0"
+    "motion": ">=8.0.0"
   },
   "scripts": {
     "build": "webpack --config ./webpack/webpack.prod.conf.js",
